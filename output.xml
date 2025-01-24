@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-01-22T17:16:47.361366" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo" source="d:\RobotFramework\Scripts\demo.robot">
+<test id="s1-t1" name="Test radio button operations" line="12">
+<kw name="Read Xml" owner="support">
+<msg time="2025-01-22T17:16:47.857025" level="INFO">${URL} = https://demo.automationtesting.in/Frames.html</msg>
+<var>${URL}</var>
+<arg>demoautoamtionURL</arg>
+<status status="PASS" start="2025-01-22T17:16:47.843356" elapsed="0.016648"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:16:47.861002" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Frames.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-22T17:16:47.861002" elapsed="4.847464"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-22T17:16:52.709584" elapsed="0.059599"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:16:52.771958" level="INFO">Selecting frame 'id:singleframe'.</msg>
+<arg>id:singleframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-01-22T17:16:52.770690" elapsed="0.039094"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:16:52.810779" level="INFO">Typing text 'Testing' into text field '//input[@type='text']'.</msg>
+<arg>//input[@type='text']</arg>
+<arg>Testing</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T17:16:52.809784" elapsed="0.103234"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T17:16:57.914721" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T17:16:52.913018" elapsed="5.001703"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2025-01-22T17:16:57.916734" elapsed="0.011556"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-22T17:16:57.929291" elapsed="2.255235"/>
+</kw>
+<status status="PASS" start="2025-01-22T17:16:47.842364" elapsed="12.344056"/>
+</test>
+<status status="PASS" start="2025-01-22T17:16:47.370732" elapsed="12.818677"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

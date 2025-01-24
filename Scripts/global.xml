@@ -1,0 +1,11 @@
+<testdata> 
+<applicationurl>https://katalon.com/</applicationurl> 
+<heroku_URL>https://the-internet.herokuapp.com/javascript_alerts</heroku_URL>
+<alert_text>Password$$#1</alert_text>
+<letskodeit>https://www.letskodeit.com/practice</letskodeit>
+<demoautoamtionURL>https://demo.automationtesting.in/Frames.html</demoautoamtionURL>
+<!-- <useid>testUser</useid> 
+<password>Password$$#1</password> 
+<chrome_path>/Users/mkroy/Downloads/chromedriver</chrome_path> -->
+
+</testdata>
