@@ -20,6 +20,7 @@ Test radio button operations
     Switch Window    ${win}[1]
     Element Should Be Visible    //a[text() ='Sign In']
     Click Element    //a[text() ='Sign In']
+    Capture Page Screenshot
     Sleep    3
     Close Window
     Switch Window    ${win}[0]
