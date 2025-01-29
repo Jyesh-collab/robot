@@ -1,142 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-01-15T17:11:53.615242" rpa="false" schemaversion="5">
-<suite id="s1" name="Sauce" source="D:\RobotFramework\scripts\sauce.robot">
-<test id="s1-t1" name="Login to SauceDemo" line="14">
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-01-24T18:09:55.580110" rpa="false" schemaversion="5">
+<suite id="s1" name="Window Operations" source="D:\RobotFramework\Scripts\window_operations.robot">
+<test id="s1-t1" name="Test radio button operations" line="12">
+<kw name="Read Xml" owner="support">
+<msg time="2025-01-24T18:09:55.812911" level="INFO">${URL} = https://www.letskodeit.com/practice</msg>
+<var>${URL}</var>
+<arg>letskodeit</arg>
+<status status="PASS" start="2025-01-24T18:09:55.810473" elapsed="0.002438"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:11:54.137433" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-01-24T18:09:55.814415" level="INFO">Opening browser 'chrome' to base url 'https://www.letskodeit.com/practice'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-15T17:11:54.136437" elapsed="4.615056"/>
+<status status="PASS" start="2025-01-24T18:09:55.814415" elapsed="9.131000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T18:10:07.946635" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T18:10:04.946415" elapsed="3.000220"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-15T17:11:58.752496" elapsed="0.023356"/>
+<status status="PASS" start="2025-01-24T18:10:07.947717" elapsed="0.046452"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T18:10:07.995441" level="INFO">Clicking element '//button[@id='openwindow']'.</msg>
+<arg>${Openwindow}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T18:10:07.995441" elapsed="0.125342"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-15T17:12:08.776382" level="INFO">Slept 10 seconds.</msg>
-<arg>10 seconds</arg>
+<msg time="2025-01-24T18:10:11.121189" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-15T17:11:58.775852" elapsed="10.000530"/>
+<status status="PASS" start="2025-01-24T18:10:08.120783" elapsed="3.000406"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:08.777567" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<arg>id:user-name</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:08.776980" elapsed="0.171844"/>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-01-24T18:10:11.127443" level="INFO">${win} = ['4EA9FB9A77F5F1D72D64F4F59CBC3D59', '8A8ABA96823FFBA1DE5A0C6BA8425416']</msg>
+<var>${win}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-01-24T18:10:11.121189" elapsed="0.006254"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:08.948824" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<arg>id:password</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:08.948824" elapsed="0.117005"/>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${win}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-24T18:10:11.128482" elapsed="0.026684"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:09.067337" level="INFO">Clicking button 'id:login-button'.</msg>
-<arg>id:login-button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:09.065829" elapsed="0.129458"/>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-24T18:10:11.174074" level="INFO">Element '//a[text() ='Sign In']' is displayed.</msg>
+<arg>//a[text() ='Sign In']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-24T18:10:11.155166" elapsed="0.018908"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T18:10:11.175099" level="INFO">Clicking element '//a[text() ='Sign In']'.</msg>
+<arg>//a[text() ='Sign In']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T18:10:11.174074" elapsed="0.923604"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-24T18:10:12.207966" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-24T18:10:12.097678" elapsed="0.111190"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-15T17:12:11.195659" level="INFO">Slept 2 seconds.</msg>
-<arg>2 seconds</arg>
+<msg time="2025-01-24T18:10:15.209656" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-15T17:12:09.195287" elapsed="2.000372"/>
+<status status="PASS" start="2025-01-24T18:10:12.208868" elapsed="3.000788"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.384367" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.195659" elapsed="0.188708"/>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-24T18:10:15.210602" elapsed="0.061527"/>
 </kw>
-<status status="PASS" start="2025-01-15T17:11:54.135443" elapsed="17.249924"/>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${win}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-24T18:10:15.272129" elapsed="0.006176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T18:10:18.279414" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T18:10:15.279119" elapsed="3.000295"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-24T18:10:18.305362" level="INFO">Element '//button[@id='openwindow']' is displayed.</msg>
+<arg>${Open_window}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-24T18:10:18.279414" elapsed="0.025948"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-24T18:10:18.306370" elapsed="2.170967"/>
+</kw>
+<status status="PASS" start="2025-01-24T18:09:55.809720" elapsed="24.667617"/>
 </test>
-<test id="s1-t2" name="Add Item to Cart" line="23">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.388523" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
-<arg>id:add-to-cart-sauce-labs-backpack</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.387497" elapsed="0.094773"/>
-</kw>
-<status status="PASS" start="2025-01-15T17:12:11.387497" elapsed="0.095978"/>
-</test>
-<test id="s1-t3" name="Navigate to Checkout Screen" line="25">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.484850" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
-<arg>class:shopping_cart_link</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.484850" elapsed="0.098910"/>
-</kw>
-<status status="PASS" start="2025-01-15T17:12:11.483475" elapsed="0.100789"/>
-</test>
-<test id="s1-t4" name="Verify Checkout Flow" line="27">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.586526" level="INFO">Clicking button 'id:checkout'.</msg>
-<arg>id:checkout</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.585430" elapsed="0.095371"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.681997" level="INFO">Typing text 'Jyesh' into text field 'Id:first-name'.</msg>
-<arg>Id:first-name</arg>
-<arg>${Address_Fname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.681997" elapsed="0.103886"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.787392" level="INFO">Typing text 'QA' into text field 'Id:last-name'.</msg>
-<arg>Id:last-name</arg>
-<arg>${Address_Lname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.786387" elapsed="0.091267"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.878875" level="INFO">Typing text '123' into text field 'Id:postal-code'.</msg>
-<arg>Id:postal-code</arg>
-<arg>${Address_PCode}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.877654" elapsed="0.100861"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:11.979510" level="INFO">Clicking button 'Id:continue'.</msg>
-<arg>Id:continue</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-15T17:12:11.978515" elapsed="0.092321"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:12.200803" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-01-15T17:12:12.070836" elapsed="0.129967"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>class:footer_copy</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-01-15T17:12:12.202277" elapsed="0.302609"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-01-15T17:12:12.504886" level="INFO">Scroll is done</msg>
-<arg>Scroll is done</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-15T17:12:12.504886" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-01-15T17:12:12.647584" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-01-15T17:12:12.505883" elapsed="0.141701"/>
-</kw>
-<status status="PASS" start="2025-01-15T17:12:11.584264" elapsed="1.064844"/>
-</test>
-<status status="PASS" start="2025-01-15T17:11:53.616246" elapsed="19.034365"/>
+<status status="PASS" start="2025-01-24T18:09:55.581107" elapsed="24.897258"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Sauce">Sauce</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Window Operations">Window Operations</stat>
 </suite>
 </statistics>
 <errors>

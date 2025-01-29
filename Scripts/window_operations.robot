@@ -5,13 +5,13 @@ Variables  ../Locators/letskodeit.py
 Library    support.py
 
 *** Variables ***
-${BROWSER}        chrome
+# ${BROWSER}        chrome
 
 
 *** Test Cases ***
 Test radio button operations
-    ${URL}=    support.Read Xml    letskodeit
-    Open Browser    ${URL}    ${BROWSER}
+    # ${URL}=    support.Read Xml    letskodeit
+    # Open Browser    ${URL}    ${BROWSER}
     Sleep    3
     Maximize Browser Window
     Click Element    ${Openwindow}
